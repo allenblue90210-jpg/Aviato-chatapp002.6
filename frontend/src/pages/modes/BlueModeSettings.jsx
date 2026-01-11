@@ -33,8 +33,12 @@ export default function BlueModeSettings() {
   const wasActive = currentUser?.availabilityMode === AvailabilityMode.BLUE;
 
   const handleActivate = () => {
-    // Convert to ISO string for storage
-    const dateStr = selectedDate.toISOString().split('T')[0];
+    // Construct local YYYY-MM-DD string to ensure what user sees is what we send
+    const year = selectedDate.getFullYear();
+    const month = String(selectedDate.getMonth() + 1).padStart(2, '0');
+    const day = String(selectedDate.getDate()).padStart(2, '0');
+    const dateStr = `${year}-${month}-${day}`;
+    
     setAvailabilityMode(AvailabilityMode.BLUE, { openDate: dateStr });
     navigate('/profile');
   };
