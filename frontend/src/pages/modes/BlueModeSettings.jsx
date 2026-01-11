@@ -11,12 +11,20 @@ export default function BlueModeSettings() {
   
   // Initialize with tomorrow or current setting
   const getInitialDate = () => {
+     const tomorrow = new Date();
+     tomorrow.setDate(tomorrow.getDate() + 1);
+     tomorrow.setHours(0,0,0,0);
+
      if (currentUser?.availability?.openDate) {
-        return new Date(currentUser.availability.openDate);
+        const savedDate = new Date(currentUser.availability.openDate);
+        // If saved date is valid (tomorrow or later), use it. 
+        // Note: We compare timestamps to avoid timezone edge case issues slightly, 
+        // but >= works for Date objects.
+        if (savedDate >= tomorrow) {
+            return savedDate;
+        }
      }
-     const d = new Date();
-     d.setDate(d.getDate() + 1); // Default to tomorrow
-     return d;
+     return tomorrow;
   };
 
   const [selectedDate, setSelectedDate] = useState(getInitialDate());
