@@ -187,61 +187,8 @@ async def seed_data():
 
     logger.info("Seeding database...")
     
-    # 1. Create Demo User
-    demo_user = {
-        "_id": "current-user",
-        "id": "current-user",
-        "email": "demo@aviato.com",
-        "password": get_password_hash("password"),
-        "name": "Demo User",
-        "location": "San Francisco",
-        "vibe": "Chill",
-        "profilePic": "https://i.pravatar.cc/150?u=current-user",
-        "selections": ["Coding", "Coffee"],
-        "availabilityMode": "green",
-        "availability": Availability().model_dump(),
-        "approvalRating": 100,
-        "reviewRating": 5.0,
-        "reviewCount": 1
-    }
-    await db.users.insert_one(demo_user)
+    # Mock users removed.
     
-    # 2. Create Mock Users from mockData.js
-    mock_users = [
-      {
-        "_id": "1", "id": "1", "name": "Asuab", "location": "Los Angeles", "vibe": "Vibe coder",
-        "profilePic": "https://i.pravatar.cc/150?u=1",
-        "selections": ["Metal Gear 1", "Metal Gear 2", "Zelda", "Mario", "Pokemon"],
-        "approvalRating": 54, "reviewRating": 4.5, "reviewCount": 12, "availabilityMode": "green",
-        "availability": {"maxContact": 10, "currentContacts": 2}, "email": "asuab@test.com"
-      },
-      {
-        "_id": "2", "id": "2", "name": "Sussie", "location": "Miami", "vibe": "Vibe coder",
-        "profilePic": "https://i.pravatar.cc/150?u=2",
-        "selections": ["Metal Gear 1", "Metal Gear 2", "Metal Gear 3", "Final Fantasy", "Sonic"],
-        "approvalRating": 89, "reviewRating": 4.8, "reviewCount": 25, "availabilityMode": "yellow",
-        "availability": {"laterMinutes": 120, "maxContact": 10, "currentContacts": 5}, "email": "sussie@test.com"
-      },
-      # Add a few more...
-      {
-        "_id": "6", "id": "6", "name": "John", "location": "New York", "vibe": "Photographer",
-        "profilePic": "https://i.pravatar.cc/150?u=6",
-        "selections": ["Photography", "Art", "Travel"],
-        "approvalRating": 120, "reviewRating": 4.9, "reviewCount": 67, "availabilityMode": "green",
-        "availability": {"maxContact": 15, "currentContacts": 8}, "email": "john@test.com"
-      }
-    ]
-    
-    for u in mock_users:
-        u['password'] = get_password_hash("password") # Default password
-        # Ensure availability defaults
-        if 'availability' not in u: u['availability'] = {}
-        # Merge with default availability
-        def_avail = Availability().model_dump()
-        def_avail.update(u['availability'])
-        u['availability'] = def_avail
-        await db.users.insert_one(u)
-
     logger.info("Seeding complete.")
 
 # --- Routes ---
