@@ -257,8 +257,14 @@ api = APIRouter(prefix="/api")
 # Auth Routes
 @api.post("/auth/login", response_model=Token)
 async def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    logger.info(f"Login attempt for: {form_data.username}")
     user = await db.users.find_one({"email": form_data.username})
-    if not user or not verify_password(form_data.password, user['password']):
+    if not user:
+        logger.warning(f"Login failed: User {form_data.username} not found")
+        raise HTTPException(status_code=400, detail="Incorrect email or password")
+
+    if not verify_password(form_data.password, user['password']):
+        logger.warning(f"Login failed: Invalid password for {form_data.username}")
         raise HTTPException(status_code=400, detail="Incorrect email or password")
     
     access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
