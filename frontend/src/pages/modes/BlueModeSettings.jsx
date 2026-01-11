@@ -168,7 +168,11 @@ export default function BlueModeSettings() {
             min={(() => {
                 const d = new Date();
                 d.setDate(d.getDate() + 1);
-                return d.toISOString().split('T')[0];
+                // Return YYYY-MM-DD in local time
+                const year = d.getFullYear();
+                const month = String(d.getMonth() + 1).padStart(2, '0');
+                const day = String(d.getDate()).padStart(2, '0');
+                return `${year}-${month}-${day}`;
             })()}
             className="mt-4 w-full max-w-xs p-3 border-2 border-blue-500 rounded-xl"
           />
