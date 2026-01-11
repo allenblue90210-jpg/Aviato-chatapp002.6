@@ -43,7 +43,10 @@ const ReviewPage = () => {
     }
   };
 
-  const [filterTab, setFilterTab] = useState('all'); // 'all', 'rated', 'not_rated'
+  // Calculate counts for tabs
+  const allCount = rateableUsers.length;
+  const ratedCount = rateableUsers.filter(u => u.reviews?.some(r => r.raterId === currentUser?.id)).length;
+  const notRatedCount = rateableUsers.filter(u => !u.reviews?.some(r => r.raterId === currentUser?.id)).length;
 
   // Filter users
   const filteredUsers = rateableUsers.filter(user => {
@@ -106,7 +109,7 @@ const ReviewPage = () => {
             onClick={() => setFilterTab('all')}
             className="rounded-full h-8"
         >
-            All users
+            All users ({allCount})
         </Button>
         <Button 
             variant={filterTab === 'rated' ? "default" : "outline"} 
@@ -114,7 +117,7 @@ const ReviewPage = () => {
             onClick={() => setFilterTab('rated')}
             className="rounded-full h-8"
         >
-            You rated
+            You rated ({ratedCount})
         </Button>
         <Button 
             variant={filterTab === 'not_rated' ? "default" : "outline"} 
@@ -122,7 +125,7 @@ const ReviewPage = () => {
             onClick={() => setFilterTab('not_rated')}
             className="rounded-full h-8"
         >
-            Not rated
+            Not rated ({notRatedCount})
         </Button>
       </div>
 
