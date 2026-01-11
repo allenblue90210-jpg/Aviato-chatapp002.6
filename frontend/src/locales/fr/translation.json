@@ -1,0 +1,148 @@
+{
+  "app": {
+    "name": "Aviato",
+    "tagline": "Laisse-moi tranquille."
+  },
+  "nav": {
+    "match": "Match",
+    "chat": "Discuter",
+    "review": "Avis",
+    "profile": "Profil",
+    "settings": "Paramètres"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "language": "Langue",
+    "theme": "Thème",
+    "logout": "Se déconnecter",
+    "delete_chats": "Supprimer les discussions",
+    "availability": "Disponibilité",
+    "app": "App",
+    "about": "À propos",
+    "contact": "Contactez-nous",
+    "model": "Modèle",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité",
+    "personalization": "Personnalisation",
+    "voice": "Voix",
+    "view_profile": "Voir le profil",
+    "coming_soon": "Bientôt disponible !",
+    "logged_out": "Déconnexion réussie",
+    "chats_deleted": "Toutes les discussions ont été supprimées",
+    "confirm_logout": "Êtes-vous sûr de vouloir vous déconnecter ?",
+    "confirm_delete": "Supprimer toutes les discussions ?",
+    "delete_warning": "Cette action est irréversible. Toutes vos conversations seront définitivement supprimées.",
+    "cancel": "Annuler",
+    "close": "Fermer"
+  },
+  "profile": {
+    "title": "Profil",
+    "vibe": "Mon Ambiance",
+    "regulation": "Règlement du Profil",
+    "visibility": "VOTRE STATUT DE VISIBILITÉ",
+    "select_mode": "Sélectionnez votre mode de disponibilité",
+    "active": "ACTIF",
+    "default_state": "État par défaut",
+    "invisible_desc": "Vous pouvez recevoir des messages mais apparaître hors ligne pour les autres.",
+    "loading": "Chargement du profil...",
+    "edit": "Modifier",
+    "add": "Ajouter",
+    "add_interests": "Ajoutez jusqu'à 5 intérêts",
+    "location": "Emplacement"
+  },
+  "mode": {
+    "green": {
+      "name": "Mode Disponible",
+      "desc": "En ligne et prêt à discuter",
+      "settings": "Visible pour tout le monde"
+    },
+    "blue": {
+      "name": "Mode Ouvert",
+      "desc": "Disponible à partir d'une date spécifique"
+    },
+    "yellow": {
+      "name": "Mode Plus Tard",
+      "desc": "Disponible pour une durée limitée",
+      "expires_in": "Expire dans {{minutes}} minutes"
+    },
+    "orange": {
+      "name": "Mode Contact Max",
+      "desc": "Limiter le nombre de contacts",
+      "slots": "{{current}}/{{max}} créneaux disponibles"
+    },
+    "red": {
+      "name": "Mode Verrouillé",
+      "desc": "Complètement indisponible",
+      "settings": "Toute messagerie bloquée",
+      "confirm_title": "Activer le Mode Verrouillé ?",
+      "confirm_desc": "Toute la messagerie sera bloquée. Vous ne recevrez aucun nouveau message.",
+      "action": "Verrouiller"
+    },
+    "gray": {
+      "name": "Mode Pause",
+      "desc": "Temporairement en pause",
+      "settings": "Messagerie en pause"
+    },
+    "brown": {
+      "name": "Mode Chronométré",
+      "desc": "Disponible à une heure précise",
+      "opens_at": "Ouvre à {{time}}"
+    },
+    "invisible": {
+      "name": "Mode Invisible"
+    },
+    "deactivate_title": "Désactiver {{mode}} ?",
+    "deactivate_desc": "Vous passerez en Mode Invisible 👻.",
+    "deactivate_action": "Désactiver",
+    "toast_active": "{{mode}} est maintenant ACTIF !",
+    "toast_inactive": "{{mode}} est maintenant INACTIF ! Vous êtes maintenant Invisible"
+  },
+  "signin": {
+    "title": "Se connecter",
+    "google": "Se connecter avec Google",
+    "guest": "Continuer en tant qu'invité",
+    "create_account": "Créer un compte",
+    "welcome": "Bienvenue sur Aviato",
+    "join_community": "Rejoignez la communauté aujourd'hui",
+    "sign_in_continue": "Connectez-vous pour continuer votre voyage",
+    "full_name": "Nom complet",
+    "email": "Email",
+    "password": "Mot de passe",
+    "creating": "Création du compte...",
+    "signing_in": "Connexion...",
+    "or_email": "ou continuer avec l'email",
+    "already_account": "Vous avez déjà un compte ?",
+    "dont_have_account": "Vous n'avez pas de compte ?"
+  },
+  "match": {
+    "find_vibe": "Trouvez votre Vibe",
+    "select_interests": "Sélectionnez des intérêts",
+    "interests_selected": "{{count}} intérêts sélectionnés",
+    "no_matches": "Aucun match trouvé avec ces intérêts.",
+    "no_users": "Aucun utilisateur trouvé correspondant à \"{{query}}\"",
+    "search_placeholder": "Rechercher un nom ou une note..."
+  },
+  "review": {
+    "rate": "Noter",
+    "rated": "Noté",
+    "rate_user": "Noter {{name}}",
+    "no_users": "Aucun utilisateur trouvé à évaluer.",
+    "search_placeholder": "Rechercher des personnes avec qui vous avez discuté...",
+    "rated_by": "Noté par"
+  },
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "add": "Ajouter",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "done": "Terminé",
+    "loading": "Chargement...",
+    "search": "Rechercher...",
+    "message": "Message",
+    "unavailable": "Indisponible"
+  }
+}

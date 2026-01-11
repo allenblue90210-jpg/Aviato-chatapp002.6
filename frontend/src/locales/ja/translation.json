@@ -1,0 +1,148 @@
+{
+  "app": {
+    "name": "Aviato",
+    "tagline": "放っておいて。"
+  },
+  "nav": {
+    "match": "マッチ",
+    "chat": "チャット",
+    "review": "レビュー",
+    "profile": "プロフィール",
+    "settings": "設定"
+  },
+  "settings": {
+    "title": "設定",
+    "language": "言語",
+    "theme": "テーマ",
+    "logout": "ログアウト",
+    "delete_chats": "すべてのチャットを削除",
+    "availability": "ステータス",
+    "app": "アプリ",
+    "about": "Aviatoについて",
+    "contact": "お問い合わせ",
+    "model": "モデル",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー",
+    "personalization": "パーソナライズ",
+    "voice": "音声",
+    "view_profile": "プロフィールを表示",
+    "coming_soon": "近日公開！",
+    "logged_out": "ログアウトしました",
+    "chats_deleted": "すべてのチャットを削除しました",
+    "confirm_logout": "ログアウトしてもよろしいですか？",
+    "confirm_delete": "すべてのチャットを削除しますか？",
+    "delete_warning": "この操作は取り消せません。すべての会話が完全に削除されます。",
+    "cancel": "キャンセル",
+    "close": "閉じる"
+  },
+  "profile": {
+    "title": "プロフィール",
+    "vibe": "バイブス",
+    "regulation": "プロフィール設定規制",
+    "visibility": "あなたの公開ステータス",
+    "select_mode": "可用性モードを選択",
+    "active": "アクティブ",
+    "default_state": "デフォルト状態",
+    "invisible_desc": "メッセージを受信できますが、他の人にはオフラインとして表示されます。",
+    "loading": "プロフィールを読み込み中...",
+    "edit": "編集",
+    "add": "追加",
+    "add_interests": "最大5つの興味を追加してマッチング",
+    "location": "場所"
+  },
+  "mode": {
+    "green": {
+      "name": "可能モード",
+      "desc": "オンライン・チャット可能",
+      "settings": "誰にでも表示"
+    },
+    "blue": {
+      "name": "オープンモード",
+      "desc": "特定の日付から利用可能"
+    },
+    "yellow": {
+      "name": "後でモード",
+      "desc": "期間限定で利用可能",
+      "expires_in": "あと {{minutes}} 分で終了"
+    },
+    "orange": {
+      "name": "最大コンタクトモード",
+      "desc": "コンタクト数を制限",
+      "slots": "{{current}}/{{max}} スロット利用可能"
+    },
+    "red": {
+      "name": "ロックモード",
+      "desc": "完全に利用不可",
+      "settings": "すべてのメッセージングをブロック",
+      "confirm_title": "ロックモードを有効にしますか？",
+      "confirm_desc": "すべてのメッセージングがブロックされます。新しいメッセージは受信されません。",
+      "action": "ロック"
+    },
+    "gray": {
+      "name": "一時停止モード",
+      "desc": "一時的に停止中",
+      "settings": "メッセージング一時停止"
+    },
+    "brown": {
+      "name": "時間指定モード",
+      "desc": "特定の時間に利用可能",
+      "opens_at": "{{time}} に開始"
+    },
+    "invisible": {
+      "name": "インビジブルモード"
+    },
+    "deactivate_title": "{{mode}}を無効にしますか？",
+    "deactivate_desc": "インビジブルモード 👻 に切り替わります。",
+    "deactivate_action": "無効化",
+    "toast_active": "{{mode}} がアクティブになりました！",
+    "toast_inactive": "{{mode}} が無効になりました！現在はインビジブルです"
+  },
+  "signin": {
+    "title": "サインイン",
+    "google": "Googleでサインイン",
+    "guest": "ゲストとして続行",
+    "create_account": "アカウント作成",
+    "welcome": "Aviatoへようこそ",
+    "join_community": "コミュニティに参加しよう",
+    "sign_in_continue": "サインインして続ける",
+    "full_name": "氏名",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "creating": "アカウント作成中...",
+    "signing_in": "サインイン中...",
+    "or_email": "またはメールで続行",
+    "already_account": "すでにアカウントをお持ちですか？",
+    "dont_have_account": "アカウントをお持ちでないですか？"
+  },
+  "match": {
+    "find_vibe": "バイブスを見つける",
+    "select_interests": "興味を選択してマッチング",
+    "interests_selected": "{{count}} 個の興味を選択中",
+    "no_matches": "これら興味に一致するマッチは見つかりませんでした。",
+    "no_users": "\"{{query}}\" に一致するユーザーは見つかりませんでした",
+    "search_placeholder": "名前または評価で検索..."
+  },
+  "review": {
+    "rate": "評価",
+    "rated": "評価済み",
+    "rate_user": "{{name}} を評価",
+    "no_users": "レビューするユーザーが見つかりません。",
+    "search_placeholder": "チャットした人を検索...",
+    "rated_by": "評価者"
+  },
+  "common": {
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "add": "追加",
+    "close": "閉じる",
+    "back": "戻る",
+    "next": "次へ",
+    "done": "完了",
+    "loading": "読み込み中...",
+    "search": "検索...",
+    "message": "メッセージ",
+    "unavailable": "利用不可"
+  }
+}

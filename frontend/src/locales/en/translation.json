@@ -1,0 +1,148 @@
+{
+  "app": {
+    "name": "Aviato",
+    "tagline": "Leave me alone."
+  },
+  "nav": {
+    "match": "Match",
+    "chat": "Chat",
+    "review": "Kinetic",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "logout": "Log out",
+    "delete_chats": "Delete all chats",
+    "availability": "Availability",
+    "app": "App",
+    "about": "About",
+    "contact": "Contact Us",
+    "model": "Model",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "personalization": "Personalization",
+    "voice": "Voice",
+    "view_profile": "View Profile",
+    "coming_soon": "Coming soon!",
+    "logged_out": "Logged out successfully",
+    "chats_deleted": "All chats deleted",
+    "confirm_logout": "Are you sure you want to log out?",
+    "confirm_delete": "Delete all chats?",
+    "delete_warning": "This action cannot be undone. All your conversations will be permanently deleted.",
+    "cancel": "Cancel",
+    "close": "Close"
+  },
+  "profile": {
+    "title": "Profile",
+    "vibe": "My Vibe",
+    "regulation": "Profile Set Regulation",
+    "visibility": "YOUR VISIBILITY STATUS",
+    "select_mode": "Select Your Availability Mode",
+    "active": "ACTIVE",
+    "default_state": "Default State",
+    "invisible_desc": "You can receive messages but appear offline to others.",
+    "loading": "Loading profile...",
+    "edit": "Edit",
+    "add": "Add",
+    "add_interests": "Add up to 5 interests to find matches",
+    "location": "Location"
+  },
+  "mode": {
+    "green": {
+      "name": "Available Mode",
+      "desc": "Online and ready to chat",
+      "settings": "Visible to everyone"
+    },
+    "blue": {
+      "name": "Open Mode",
+      "desc": "Available from specific date"
+    },
+    "yellow": {
+      "name": "Later Mode",
+      "desc": "Available for limited duration",
+      "expires_in": "Expires in {{minutes}} minutes"
+    },
+    "orange": {
+      "name": "Max Contact Mode",
+      "desc": "Limit number of contacts",
+      "slots": "{{current}}/{{max}} slots available"
+    },
+    "red": {
+      "name": "Locked Mode",
+      "desc": "Completely unavailable",
+      "settings": "All messaging blocked",
+      "confirm_title": "Activate Locked Mode?",
+      "confirm_desc": "All messaging will be blocked. You will not receive any new messages.",
+      "action": "Lock"
+    },
+    "gray": {
+      "name": "Pause Mode",
+      "desc": "Temporarily paused",
+      "settings": "Messaging paused"
+    },
+    "brown": {
+      "name": "Timed Mode",
+      "desc": "Available at specific time",
+      "opens_at": "Opens at {{time}}"
+    },
+    "invisible": {
+      "name": "Invisible Mode"
+    },
+    "deactivate_title": "Deactivate {{mode}}?",
+    "deactivate_desc": "You will switch to Invisible Mode 👻.",
+    "deactivate_action": "Deactivate",
+    "toast_active": "{{mode}} is now ACTIVE!",
+    "toast_inactive": "{{mode}} is now INACTIVE! You are now Invisible"
+  },
+  "signin": {
+    "title": "Sign In",
+    "google": "Sign in with Google",
+    "guest": "Continue as Guest",
+    "create_account": "Create an Account",
+    "welcome": "Welcome to Aviato",
+    "join_community": "Join the community today",
+    "sign_in_continue": "Sign in to continue your journey",
+    "full_name": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "creating": "Creating Account...",
+    "signing_in": "Signing in...",
+    "or_email": "or continue with email",
+    "already_account": "Already have an account?",
+    "dont_have_account": "Don't have an account?"
+  },
+  "match": {
+    "find_vibe": "Find your Vibe",
+    "select_interests": "Select interests to match",
+    "interests_selected": "{{count}} interests selected",
+    "no_matches": "No matches found with these interests.",
+    "no_users": "No users found matching \"{{query}}\"",
+    "search_placeholder": "Search name or rating..."
+  },
+  "review": {
+    "rate": "Rate",
+    "rated": "Rated",
+    "rate_user": "Rate {{name}}",
+    "no_users": "No users found to review.",
+    "search_placeholder": "Search for people you've chatted with...",
+    "rated_by": "Rated By"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "done": "Done",
+    "loading": "Loading...",
+    "search": "Search...",
+    "message": "Message",
+    "unavailable": "Unavailable"
+  }
+}
