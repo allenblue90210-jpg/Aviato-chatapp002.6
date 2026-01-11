@@ -133,11 +133,31 @@ export default function BlueModeSettings() {
             value={selectedDate.toISOString().split('T')[0]}
             onChange={(e) => {
               if (e.target.value) {
-                 setSelectedDate(new Date(e.target.value));
+                 const newDate = new Date(e.target.value);
+                 // Enforce tomorrow as minimum
+                 const tomorrow = new Date();
+                 tomorrow.setDate(tomorrow.getDate() + 1);
+                 tomorrow.setHours(0,0,0,0);
+                 
+                 // Reset time part of newDate for accurate comparison
+                 // (Date from input is usually UTC midnight or local midnight depending on parsing, 
+                 // but let's be safe)
+                 // Actually new Date(string) from yyyy-mm-dd works in UTC usually. 
+                 // Let's use simple string comparison for safety or ensure date object comparison is robust.
+                 
+                 if (newDate < tomorrow) {
+                     setSelectedDate(tomorrow);
+                 } else {
+                     setSelectedDate(newDate);
+                 }
                  setShowDatePicker(false);
               }
             }}
-            min={new Date().toISOString().split('T')[0]}
+            min={(() => {
+                const d = new Date();
+                d.setDate(d.getDate() + 1);
+                return d.toISOString().split('T')[0];
+            })()}
             className="mt-4 w-full max-w-xs p-3 border-2 border-blue-500 rounded-xl"
           />
         )}
