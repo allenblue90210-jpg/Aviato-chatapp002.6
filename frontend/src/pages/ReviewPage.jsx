@@ -43,6 +43,7 @@ const ReviewPage = () => {
     }
   };
 
+  const [filterTab, setFilterTab] = useState('all'); // 'all', 'rated', 'not_rated'
   // Calculate counts for tabs
   const allCount = rateableUsers.length;
   const ratedCount = rateableUsers.filter(u => u.reviews?.some(r => r.raterId === currentUser?.id)).length;
