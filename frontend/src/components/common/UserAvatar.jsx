@@ -1,14 +1,27 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { User } from 'lucide-react';
 
 const UserAvatar = ({ src, alt, className, size = 24 }) => {
-  if (src) {
+  const [imgSrc, setImgSrc] = useState(src);
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    setImgSrc(src);
+    setHasError(false);
+  }, [src]);
+
+  const handleError = () => {
+    setHasError(true);
+  };
+
+  if (imgSrc && !hasError) {
     return (
       <img 
-        src={src} 
+        src={imgSrc} 
         alt={alt} 
         className={`${className} object-cover`}
+        onError={handleError}
       />
     );
   }
