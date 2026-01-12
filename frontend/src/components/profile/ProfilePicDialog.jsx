@@ -124,68 +124,20 @@ const ProfilePicDialog = ({ isOpen, onClose, currentPic, currentName, currentLoc
             </div>
           </div>
 
-          {/* Tabs */}
-          <div className="flex p-1 bg-muted rounded-lg border border-border">
-            <button
-              onClick={() => setActiveTab('upload')}
-              className={`flex-1 flex items-center justify-center gap-2 py-2 text-sm font-medium rounded-md transition-all ${
-                activeTab === 'upload' 
-                  ? 'bg-card text-foreground shadow-sm' 
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              <Upload className="w-4 h-4" />
-              Upload Photo
-            </button>
-            <button
-              onClick={() => setActiveTab('link')}
-              className={`flex-1 flex items-center justify-center gap-2 py-2 text-sm font-medium rounded-md transition-all ${
-                activeTab === 'link' 
-                  ? 'bg-card text-foreground shadow-sm' 
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              <LinkIcon className="w-4 h-4" />
-              Image Link
-            </button>
+          {/* Upload Section */}
+          <div className="border-2 border-dashed border-border rounded-xl p-8 hover:border-primary/50 hover:bg-primary/5 transition-colors cursor-pointer relative text-center">
+            <input 
+                type="file" 
+                accept="image/*"
+                onChange={handleFileChange}
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+            />
+            <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 text-primary">
+              <ImageIcon className="w-6 h-6" />
+            </div>
+            <h3 className="text-sm font-semibold text-foreground">Click to upload image</h3>
+            <p className="text-xs text-muted-foreground mt-1">SVG, PNG, JPG or GIF (max 5MB)</p>
           </div>
-
-          {/* Upload Tab */}
-          {activeTab === 'upload' && (
-            <div className="border-2 border-dashed border-border rounded-xl p-8 hover:border-primary/50 hover:bg-primary/5 transition-colors cursor-pointer relative text-center">
-              <input 
-                  type="file" 
-                  accept="image/*"
-                  onChange={handleFileChange}
-                  className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
-              />
-              <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 text-primary">
-                <ImageIcon className="w-6 h-6" />
-              </div>
-              <h3 className="text-sm font-semibold text-foreground">Click to upload image</h3>
-              <p className="text-xs text-muted-foreground mt-1">SVG, PNG, JPG or GIF (max 5MB)</p>
-            </div>
-          )}
-
-          {/* Link Tab */}
-          {activeTab === 'link' && (
-            <div className="space-y-3">
-              <Label htmlFor="img-url" className="text-foreground">Paste image URL</Label>
-              <Input 
-                id="img-url"
-                value={url.startsWith('data:') ? '' : url}
-                onChange={(e) => {
-                    setUrl(e.target.value);
-                    setError('');
-                }}
-                placeholder="https://example.com/image.jpg"
-                className="bg-muted border-border text-foreground"
-              />
-              <p className="text-xs text-muted-foreground">
-                Works best with direct links to images (ending in .jpg, .png, etc.)
-              </p>
-            </div>
-          )}
           
           {error && (
             <div className="p-3 bg-destructive/10 text-destructive text-sm rounded-lg flex items-center justify-center">
