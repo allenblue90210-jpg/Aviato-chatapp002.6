@@ -13,7 +13,6 @@ const ProfilePicDialog = ({ isOpen, onClose, currentPic, currentName, currentLoc
   const [name, setName] = useState(currentName || '');
   const [location, setLocation] = useState(currentLocation || '');
   const [error, setError] = useState('');
-  const [activeTab, setActiveTab] = useState('upload'); // 'upload' or 'link'
 
   useEffect(() => {
     setUrl(currentPic || '');
